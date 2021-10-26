@@ -1,6 +1,6 @@
 FROM        adoptopenjdk/openjdk16:alpine-jre
 
-LABEL       author="Harry W" maintainer="Dave B"
+LABEL       author="Harry W." maintainer="Dave B."
 
 RUN         apk --update add wget
 RUN         adduser -D -h /home/container container

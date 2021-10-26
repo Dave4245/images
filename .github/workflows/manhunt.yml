@@ -1,4 +1,4 @@
-name: Build nodejs
+name: Manhunt
 on:
   schedule:
     - cron: "0 0 * * 1"
@@ -6,11 +6,11 @@ on:
     branches:
       - master
     paths:
-      - nodejs/*
+      - manhunt/*
       - entrypoint.sh
 jobs:
   push:
-    name: "images:nodejs"
+    name: "images:manhunt"
     runs-on: self-hosted
     strategy:
       fail-fast: false
@@ -27,9 +27,9 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
       - uses: docker/build-push-action@v2
         with:
-          context: .
-          file: ./nodejs/Dockerfile
+          context: ./clean
+          file: ./clean/Dockerfile
           platforms: linux/amd64
           push: true
           tags: |
-            ghcr.io/hwalker928/images:nodejs
+            ghcr.io/dave4245/images:manhunt

@@ -1,4 +1,4 @@
-name: Build clean
+name: Minecraft But
 on:
   schedule:
     - cron: "0 0 * * 1"
@@ -6,10 +6,11 @@ on:
     branches:
       - master
     paths:
-      - clean/*
+      - minecraft_but/*
+      - entrypoint.sh
 jobs:
   push:
-    name: "images:clean"
+    name: "images:minecraft_but"
     runs-on: self-hosted
     strategy:
       fail-fast: false
@@ -31,4 +32,4 @@ jobs:
           platforms: linux/amd64
           push: true
           tags: |
-            ghcr.io/hwalker928/images:clean
+            ghcr.io/dave4245/images:minecraft_but

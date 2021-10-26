@@ -11,7 +11,7 @@ on:
 jobs:
   push:
     name: "images:minecraft_but"
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     strategy:
       fail-fast: false
     steps:

@@ -9,10 +9,10 @@ echo "==============================================================="
 rm -r /home/container/*
 
 echo "==============================================================="
-echo "Downloading new server files from https://templates.exeomc.net/gamemode/manhunt"
+echo "Downloading new server files from https://templates.exeomc.net/gamemode/manhunt/"
 echo "==============================================================="
 
-wget https://templates.exeomc.net/gamemode/manhunt
+wget -r https://templates.exeomc.net/gamemode/manhunt/
 
 echo "==============================================================="
 echo "Starting server."

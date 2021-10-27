@@ -12,7 +12,7 @@ echo "==============================================================="
 echo "Downloading new server files from https://templates.exeomc.net/gamemode/minecraft_but/"
 echo "==============================================================="
 
-wget -r https://templates.exeomc.net/gamemode/manhunt/
+wget -r -np https://templates.exeomc.net/gamemode/manhunt/
 
 echo "==============================================================="
 echo "Starting server."

@@ -12,7 +12,7 @@ echo "==============================================================="
 echo "Downloading new server files from https://templates.exeomc.net/manhunt/"
 echo "==============================================================="
 
-wget -R html -r -np https://templates.exeomc.net/manhunt/
+wget -r -np -R "index.html*" https://templates.exeomc.net/manhunt/
 
 echo "==============================================================="
 echo "Starting server."

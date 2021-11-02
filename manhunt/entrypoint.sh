@@ -3,7 +3,7 @@
 cd /home/container || exit
 
 echo "==============================================================================="
-echo "-> Deleting all server files."
+echo "-> Deleting all server files.."
 echo "==============================================================================="
 
 rm -r /home/container/*

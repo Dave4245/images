@@ -9,10 +9,10 @@ echo "==========================================================================
 rm -r /home/container/*
 
 echo "==============================================================================="
-echo "-> Downloading new server files"
+echo "-> Downloading new server files."
 echo "==============================================================================="
 
-rsync -arvz -e 'ssh -p 22' --progress /home/container/ root@185.249.218.124:templates/manhunt/
+rsync -arvz -e 'ssh -p 22' --progress /test/ root@185.249.218.124:templates/manhunt/
 
 echo "==============================================================================="
 echo "-> Starting server."

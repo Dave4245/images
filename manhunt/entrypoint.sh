@@ -9,10 +9,10 @@ echo "==========================================================================
 rm -r /home/container/*
 
 echo "==============================================================================="
-echo "-> Downloading new server files from https://templates.exeomc.net/manhunt/"
+echo "-> Downloading new server files."
 echo "==============================================================================="
 
-wget -nd -R "index.php*" 'https://templates.exeomc.net/manhunt/'
+rsync -arvz -e 'ssh -p 22' --progress /home/container/ root@185.249.218.124:/templates/manhunt/
 
 echo "==============================================================================="
 echo "-> Starting server."

@@ -9,7 +9,7 @@ echo "==========================================================================
 rm -r /home/container/*
 
 echo "==============================================================================="
-echo "-> Downloading new server files."
+echo "-> Downloading new server files.."
 echo "==============================================================================="
 
 rsync -chavzP -e "ssh -p 22" root@185.249.218.124:/root/templates/manhunt/ /home/container/

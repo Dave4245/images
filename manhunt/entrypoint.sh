@@ -12,7 +12,7 @@ echo "==========================================================================
 echo "-> Downloading new server files."
 echo "==============================================================================="
 
-rsync -arvvvz -e 'ssh -p 22' --progress root@185.249.218.124:templates/manhunt/ /home/container/
+rsync -arvvvz -e 'ssh -p 22' --progress root@185.249.218.124:/templates/manhunt/ /home/container/
 
 echo "==============================================================================="
 echo "-> Starting server."

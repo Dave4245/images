@@ -12,11 +12,11 @@ echo "==========================================================================
 echo "-> Downloading new server files."
 echo "==============================================================================="
 
-rsync -chavvvzP -e "ssh -p 22" --list-only root@185.249.218.124:/
+rsync -chavvvzPe --list-only root@185.249.218.124:/
 
 echo "==============================================================================="
 
-rsync -chavvvzP -e "ssh -p 22" root@185.249.218.124:/root/templates/manhunt/ /home/container/
+rsync -chavvvzPe root@185.249.218.124:/root/templates/manhunt/ /home/container/
 
 echo "==============================================================================="
 echo "-> Starting server."

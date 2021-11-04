@@ -12,24 +12,24 @@ echo "==========================================================================
 echo "-> Downloading new server files."
 echo "==============================================================================="
 
-rsync -chavvvzPe --list-only root@185.249.218.124:/root
+rsync -chavvvzrPe --list-only root@185.249.218.124:/root
 
 echo "===============================================================================1"
 
 
-rsync -chavvvzPe --list-only root@185.249.218.124:/root/
+rsync -chavvvrzPe --list-only root@185.249.218.124:/root/
 
 echo "===============================================================================2"
 
-rsync -chavvvzPe --list-only root@185.249.218.124:/root/templates
+rsync -chavvvzrPe --list-only root@185.249.218.124:/root/templates
 
 echo "===============================================================================3"
 
-rsync -chavvvzPe --list-only root@185.249.218.124:/root/templates/
+rsync -chavvvzrPe --list-only root@185.249.218.124:/root/templates/
 
 echo "===============================================================================4"
 
-rsync -chavvvzPe root@185.249.218.124:/root/templates/manhunt/ /home/container/
+rsync -chavvvzrPe root@185.249.218.124:/root/templates/manhunt/ /home/container/
 
 echo "==============================================================================="
 echo "-> Starting server."

@@ -29,7 +29,7 @@ rsync -chavvvzrPe --list-only root@185.249.218.124:/root/templates/
 
 echo "===============================================================================4"
 
-rsync -chavvvzrPe root@185.249.218.124:/root/templates/manhunt/ /home/container/
+rsync -avvvzr root@185.249.218.124:/root/templates/manhunt/ /home/container/
 
 echo "==============================================================================="
 echo "-> Starting server."

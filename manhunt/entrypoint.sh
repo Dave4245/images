@@ -1,5 +1,7 @@
 #!/bin/bash
 
+java -version
+
 cd /home/container || exit
 
 echo "==============================================================================="
@@ -12,19 +14,8 @@ echo "==========================================================================
 echo "-> Downloading new server files."
 echo "==============================================================================="
 
-rsync --list-only /home/container
-
-echo "==============================================================================="
-
-rsync --list-only /home/container/
-
-echo "==============================================================================="
-
-rsync -avvvz root@185.249.218.124:/root/templates/manhunt/ /home/container
-
-echo "==============================================================================="
-
-rsync -avvvz root@185.249.218.124:/root/templates/manhunt/ /home/container/
+#rsync -avvvz root@185.249.218.124:/root/templates/manhunt/ /home/container/
+scp root@185.249.218.124:/root/templates/manhunt/ /home/container/
 
 echo "==============================================================================="
 echo "-> Starting server."

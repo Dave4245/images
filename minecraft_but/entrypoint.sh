@@ -1,5 +1,7 @@
 #!/bin/bash
 
+java -version
+
 cd /home/container || exit
 
 echo "==============================================================="

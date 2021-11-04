@@ -15,7 +15,6 @@ echo "-> Downloading new server files."
 echo "==============================================================================="
 
 #rsync -avvvz root@185.249.218.124:/root/templates/manhunt/ /home/container/
-scp root@185.249.218.124:/root/templates/manhunt/ /home/container/
 
 echo "==============================================================================="
 echo "-> Starting server."

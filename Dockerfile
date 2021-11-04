@@ -2,7 +2,7 @@ FROM        adoptopenjdk/openjdk16:alpine-jre
 
 LABEL       author="Harry W." maintainer="Dave B."
 
-RUN         apk --update add ssh
+RUN         apk --update add openssh-server
 RUN         apk --update add rsync
 RUN         adduser -D -h /home/container container
 

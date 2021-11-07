@@ -10,5 +10,5 @@ WORKDIR     /home/container
 
 RUN         rsync -avvvz root@185.249.218.124:/root/templates/manhunt/ /home/container/
 
-COPY        ./entrypoint.sh /entrypoint.sh
+COPY        manhunt/entrypoint.sh /entrypoint.sh
 CMD         ["/bin/ash", "/entrypoint.sh"]

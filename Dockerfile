@@ -8,7 +8,7 @@ USER        container
 ENV         USER=container HOME=/home/container
 WORKDIR     /home/container
 
-RUN         rsync -avvvz root@185.249.218.124:/root/templates/manhunt/ /home/container/
+EXPOSE      22 22
 
 COPY        manhunt/entrypoint.sh /entrypoint.sh
 CMD         ["/bin/ash", "/entrypoint.sh"]

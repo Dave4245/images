@@ -10,5 +10,5 @@ WORKDIR     /home/container
 
 EXPOSE      22 22
 
-COPY        manhunt/entrypoint.sh /entrypoint.sh
+COPY        ./entrypoint.sh /entrypoint.sh
 CMD         ["/bin/ash", "/entrypoint.sh"]

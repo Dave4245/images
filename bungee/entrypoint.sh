@@ -21,6 +21,6 @@ echo "==============================================================="
 echo "Starting server."
 echo "==============================================================="
 
-expose PORT
+expose 25565
 
 eval "java -Xms128M -Xmx1G --enable-preview -jar server.jar"

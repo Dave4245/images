@@ -6,7 +6,7 @@ echo "==============================================================="
 echo "Downloading server files."
 echo "==============================================================="
 
-rm -rv /home/container
+rm -rv /home/container/
 cp -rv /data/. /home/container
 hostname > /home/container/server-name.txt
 

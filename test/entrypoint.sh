@@ -9,7 +9,7 @@ echo "==============================================================="
 cd /data || return
 ls .
 
-cp -rv /data/ /home/container
+cp -r -v /data /home/container
 
 cd /home/container || exit
 ls .
@@ -21,7 +21,7 @@ EOF
 ls .
 
 echo "==============================================================="
-echo "Starting server."
+echo "Starting server. (Updated)"
 echo "==============================================================="
 
 eval "java -Xms128M -Xmx7000M --enable-preview -jar server.jar"

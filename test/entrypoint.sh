@@ -9,7 +9,7 @@ echo "==============================================================="
 cd /data || return
 ls .
 
-cp -r -v /data /home/container
+cp -rv . /home/container
 
 cd /home/container || exit
 ls .

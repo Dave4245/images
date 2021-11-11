@@ -6,7 +6,7 @@ echo "==============================================================="
 echo "Downloading server files."
 echo "==============================================================="
 
-cp -rv /data /home/container
+cp -rv /data/ /home/container
 
 cd /home/container || exit
 

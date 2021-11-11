@@ -19,4 +19,6 @@ echo "==============================================================="
 echo "Starting server. (Updated)"
 echo "==============================================================="
 
+expose "${PORT}"
+
 eval "java -Xms128M -Xmx7000M --enable-preview -jar server.jar"

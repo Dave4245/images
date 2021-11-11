@@ -2,7 +2,7 @@ FROM        adoptopenjdk/openjdk16:alpine-jre
 
 LABEL       author="Dave W."
 
-RUN         adduser -D -h /home/container container && rm -r /home/container/
+RUN         rm -r /home/container/ && adduser -D -h /home/container container
 
 USER        container
 ENV         USER=container HOME=/home/container

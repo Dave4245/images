@@ -19,4 +19,6 @@ echo "==============================================================="
 echo "Starting server."
 echo "==============================================================="
 
-eval "java -Xms128M -Xmx5G --enable-preview -jar server.jar"
+expose PORT
+
+eval "java -Xms128M -Xmx1G --enable-preview -jar server.jar"

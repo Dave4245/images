@@ -11,14 +11,14 @@ cp -rv . /home/container
 
 cd /home/container || exit
 
-cat > ServerName.txt <<- "EOF"
+cat > server-name.txt <<- "EOF"
 ${SERVER_NAME}
 EOF
 
 echo "==============================================================="
-echo "Starting server. (Updated)"
+echo "Starting server."
 echo "==============================================================="
 
-expose "${PORT}"
+cat /etc/hosts
 
-eval "java -Xms128M -Xmx7000M --enable-preview -jar server.jar"
+eval "java -Xms128M -Xmx5G --enable-preview -jar server.jar"

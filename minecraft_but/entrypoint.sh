@@ -2,24 +2,21 @@
 
 java -version
 
+echo "==============================================================="
+echo "Downloading server files."
+echo "==============================================================="
+
+cd /data || exit
+cp -rv . /home/container
+
 cd /home/container || exit
 
-echo "==============================================================="
-echo "Deleting all server files."
-echo "==============================================================="
-
-rm -r /home/container/*
-
-echo "==============================================================="
-echo "Downloading new server files from https://templates.exeomc.net/minecraft_but/"
-echo "==============================================================="
-
-wget -r -np https://templates.exeomc.net/manhunt/
+cat > server-name.txt <<- "EOF"
+${SERVER_NAME}
+EOF
 
 echo "==============================================================="
 echo "Starting server."
 echo "==============================================================="
 
-export INTERNAL_IP=`ip route get 1 | awk '{print $NF;exit}'`
-MODIFIED_STARTUP=$(echo -e ${STARTUP} | sed -e 's/{{/${/g' -e 's/}}/}/g')
-eval ${MODIFIED_STARTUP}
+eval "java -Xms128M -Xmx5G --enable-preview -jar server.jar"

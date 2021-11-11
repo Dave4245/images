@@ -6,15 +6,11 @@ echo "==============================================================="
 echo "Downloading server files."
 echo "==============================================================="
 
-rm -r /home/container/
-
-cd /data || exit
-cp -rv . /home/container
-
-cd /home/container || exit
+cp -rv /data/. /home/container
 
 echo "==============================================================="
 echo "Starting server."
 echo "==============================================================="
 
+cd /home/container || exit
 eval "java -Xms128M -Xmx1G --enable-preview -jar Bot.jar"

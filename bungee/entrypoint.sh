@@ -6,21 +6,12 @@ echo "==============================================================="
 echo "Downloading server files."
 echo "==============================================================="
 
-rm -r /home/container/
-
-cd /data || exit
-cp -rv . /home/container
-
-cd /home/container || exit
-
-cat > server-name.txt <<- "EOF"
-${SERVER_NAME}
-EOF
+cp -rv /data/. /home/container
+hostname > /home/container/server-name.txt
 
 echo "==============================================================="
 echo "Starting server."
 echo "==============================================================="
 
-expose 25565
-
+cd /home/container || exit
 eval "java -Xms128M -Xmx1G --enable-preview -jar server.jar"

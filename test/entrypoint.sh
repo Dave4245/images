@@ -6,22 +6,16 @@ echo "==============================================================="
 echo "Downloading server files."
 echo "==============================================================="
 
-cd /data || return
-ls .
-
-cp -rv . /home/container
+cp -rv /data /home/container
 
 cd /home/container || exit
-ls .
 
 cat > ServerName.txt <<- "EOF"
 ${SERVER_NAME}
 EOF
 
-ls .
-
 echo "==============================================================="
-echo "Starting server. (Updated)"
+echo "Starting server."
 echo "==============================================================="
 
 eval "java -Xms128M -Xmx7000M --enable-preview -jar server.jar"

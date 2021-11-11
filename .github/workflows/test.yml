@@ -6,7 +6,7 @@ on:
     branches:
       - master
     paths:
-      - test/*
+      - test/entrypoint.sh
       - Dockerfile
 jobs:
   push:

@@ -1,4 +1,4 @@
-name: Central Control
+name: Hub
 on:
   schedule:
     - cron: "0 0 * * 1"
@@ -6,11 +6,11 @@ on:
     branches:
       - master
     paths:
-      - centralcontrol/*
+      - hub/*
       - Dockerfile
 jobs:
   push:
-    name: "images:cc"
+    name: "images:hub"
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -27,9 +27,9 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
       - uses: docker/build-push-action@v2
         with:
-          context: ./centralcontrol
+          context: ./hub
           file: ./Dockerfile
           platforms: linux/amd64
           push: true
           tags: |
-            ghcr.io/dave4245/images:cc
+            ghcr.io/dave4245/images:hub

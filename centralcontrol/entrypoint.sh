@@ -6,11 +6,12 @@ echo "==============================================================="
 echo "Downloading server files."
 echo "==============================================================="
 
-cp -rv /data/. /home/container
+rm -rv /home/container/data/
+cp -rvT /data/ /home/container/data/
 
 echo "==============================================================="
 echo "Starting server."
 echo "==============================================================="
 
-cd /home/container || exit
+cd /home/container/data || exit
 eval "java -Xms128M -Xmx1G --enable-preview -jar CentralControl.jar"

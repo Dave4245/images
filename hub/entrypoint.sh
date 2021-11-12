@@ -15,4 +15,5 @@ echo "Starting server."
 echo "==============================================================="
 
 cd /home/container/data || exit
-eval "java -Xms128M -Xmx5G --enable-preview -jar server.jar"
+eval "java -Xms128M -Xmx3G --enable-preview -jar server.jar"
+

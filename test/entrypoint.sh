@@ -8,10 +8,9 @@ echo "==============================================================="
 
 sleep 5
 
-ls /home/container/data
 rm -rv /home/container/data/
 cp -rvT /data/ /home/container/data/
-hostname > /home/container/server-name.txt
+hostname > /home/container/data/server-name.txt
 
 echo "==============================================================="
 echo "Starting server."

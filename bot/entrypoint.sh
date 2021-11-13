@@ -14,4 +14,4 @@ echo "Starting server."
 echo "==============================================================="
 
 cd /home/container/data || exit
-eval "java -Xms128M -Xmx1G --enable-preview -jar Bot.jar"
+exec "java -Xms128M -Xmx1G --enable-preview -jar Bot.jar"

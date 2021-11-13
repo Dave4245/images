@@ -2,7 +2,11 @@ FROM adoptopenjdk/openjdk16:alpine-jre
 
 LABEL author="Dave B."
 
+ARG TARGETOS
+ARG TARGETARCH
+ARG TARGETVARIANT
 ARG EASY_ADD_VER=0.7.1
+
 ADD https://github.com/itzg/easy-add/releases/download/${EASY_ADD_VER}/easy-add_${TARGETOS}_${TARGETARCH}${TARGETVARIANT} /usr/bin/easy-add
 
 RUN adduser -D -h /home/container container && chmod +x /usr/bin/easy-add && \

@@ -9,7 +9,7 @@ echo "==============================================================="
 rm -rv /home/container/data/
 cp -rvT /data/ /home/container/data/
 hostname > /home/container/data/server-name.txt
-
+ls
 echo "==============================================================="
 echo "Starting server."
 echo "==============================================================="

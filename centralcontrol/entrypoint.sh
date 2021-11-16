@@ -7,7 +7,8 @@ echo "Downloading server files."
 echo "==============================================================="
 
 rm -rv /home/container/data/
-cp -rv /data/. /home/container/data/
+cd /data || exit
+cp -Rv . /home/container/data/
 
 echo "==============================================================="
 echo "Starting server."

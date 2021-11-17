@@ -1,6 +1,7 @@
 FROM adoptopenjdk/openjdk16:alpine-jre
 
-LABEL author="Dave B."
+ARG SERVER_TYPE=none
+LABEL Server_Type=${SERVER_TYPE}
 
 RUN adduser -D -h /home/container/data container
 

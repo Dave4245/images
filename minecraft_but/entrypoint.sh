@@ -8,7 +8,7 @@ echo "==============================================================="
 
 rm -rv /home/container/data/
 cp -RvT /data/ /home/container/data/
-hostname > /home/container/data/server-name.txt
+hostname > /home/container/data/hostname.txt
 
 echo "==============================================================="
 echo "Starting server."

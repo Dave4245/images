@@ -1,8 +1,5 @@
 FROM adoptopenjdk/openjdk16:alpine-jre
 
-ARG SERVER_TYPE=none
-LABEL Server_Type=${SERVER_TYPE}
-
 RUN adduser -D -h /home/container/data container
 
 USER container

@@ -6,11 +6,6 @@ echo "==============================================================="
 echo "Downloading server files."
 echo "==============================================================="
 
-rm -rv /home/container/data/
-cp -RvT /data/ /home/container/data/
-hostname > /home/container/data/hostname.txt
-cat /home/container/data/hostname.txt
-
 echo "==============================================================="
 echo "Starting server."
 echo "==============================================================="

@@ -6,7 +6,7 @@ on:
     branches:
       - master
     paths:
-      - manhunt/*
+      - hitmen/*
       - Dockerfile
 jobs:
   push:

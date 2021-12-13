@@ -9,8 +9,8 @@ echo "==============================================================="
 rm -rv /home/container/data/
 mkdir -pv /home/container/data/plugins/
 
-cp -rv /data/servers/plugins/bungee/. /home/container/data/plugins
-cp -rv /data/servers/configs/bungee/. /home/container/data
+cp -rv /data/servers/plugins/bungee/* /home/container/data/plugins
+cp -rv /data/servers/configs/bungee/* /home/container/data
 
 echo "==============================================================="
 echo "Starting server."

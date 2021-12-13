@@ -10,8 +10,8 @@ rm -rv /home/container/data/
 mkdir -pv /home/container/data/plugins/
 
 cp -rv /data/servers/plugins/BlockShuffle.jar /home/container/data/plugins/
-cp -rv /data/servers/configs/minigame /home/container/data/
-cp -rv /data/servers/plugins/core /home/container/data/plugins/
+cp -rv /data/servers/configs/minigame/* /home/container/data/
+cp -rv /data/servers/plugins/core/* /home/container/data/plugins/
 
 hostname > /home/container/data/hostname.txt
 

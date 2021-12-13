@@ -9,7 +9,7 @@ echo "==============================================================="
 rm -rv /home/container/data/
 mkdir -pv /home/container/data/
 
-cp -RpvT /data/systems/Bot.jar /home/container/data/
+cp -rv /data/systems/Bot.jar /home/container/data
 
 echo "==============================================================="
 echo "Starting server."

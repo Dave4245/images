@@ -6,8 +6,9 @@ echo "==============================================================="
 echo "Downloading server files."
 echo "==============================================================="
 
-rm -rpv /home/container/data/
-cp -vpT /data/systems/Bot.jar /home/container/data/
+rm -rv /home/container/data/
+
+cp -RpvT /data/systems/Bot.jar /home/container/data/
 
 echo "==============================================================="
 echo "Starting server."

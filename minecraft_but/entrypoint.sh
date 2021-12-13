@@ -9,9 +9,9 @@ echo "==============================================================="
 rm -rv /home/container/data/
 mkdir -pv /home/container/data/plugins/
 
-cp -vpT /data/servers/plugins/MinecraftBut.jar /home/container/data/plugins/
-cp -RvpT /data/servers/configs/minigame/ /home/container/data/
-cp -RvpT /data/servers/plugins/core/ /home/container/data/plugins/
+cp -RpvT /data/servers/plugins/MinecraftBut.jar /home/container/data/plugins/
+cp -RpvT /data/servers/configs/minigame/ /home/container/data/
+cp -RpvT /data/servers/plugins/core/ /home/container/data/plugins/
 
 hostname > /home/container/data/hostname.txt
 

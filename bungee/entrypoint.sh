@@ -7,8 +7,8 @@ echo "Downloading server files."
 echo "==============================================================="
 
 rm -rv /home/container/data/
-cp -RvT /data/servers/plugins/bungee/ /home/container/data/plugins/
-cp -RvT /data/servers/configs/bungee/ /home/container/data/
+cp -RpvT /data/servers/plugins/bungee/ /home/container/data/plugins/
+cp -RpvT /data/servers/configs/bungee/ /home/container/data/
 
 echo "==============================================================="
 echo "Starting server."

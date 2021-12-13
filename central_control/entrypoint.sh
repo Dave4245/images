@@ -7,7 +7,7 @@ echo "Downloading server files."
 echo "==============================================================="
 
 rm -rv /home/container/data/
-cp -vT /data/systems/CentralControl.jar /home/container/data/
+cp -vpT /data/systems/CentralControl.jar /home/container/data/
 
 echo "==============================================================="
 echo "Starting server."

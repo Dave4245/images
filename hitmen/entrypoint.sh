@@ -7,6 +7,7 @@ echo "Downloading server files."
 echo "==============================================================="
 
 rm -rv /home/container/data/
+mkdir /home/container/data/plugins/
 
 cp -vpT /data/servers/plugins/Hitmen.jar /home/container/data/plugins/
 cp -RpvT /data/servers/configs/minigame/ /home/container/data/

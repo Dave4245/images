@@ -7,6 +7,7 @@ echo "Downloading server files."
 echo "==============================================================="
 
 rm -rv /home/container/data/
+mkdir /home/container/data/plugins/
 
 cp -pvT /data/servers/plugins/Manhunt.jar /home/container/data/plugins/
 cp -RvpT /data/servers/configs/minigame/ /home/container/data/

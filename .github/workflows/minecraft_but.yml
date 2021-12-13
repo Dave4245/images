@@ -10,7 +10,7 @@ on:
       - Dockerfile
 jobs:
   push:
-    name: "images:mb"
+    name: "images:minecraft_but"
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -32,4 +32,4 @@ jobs:
           platforms: linux/amd64
           push: true
           tags: |
-            ghcr.io/dave4245/images:mb
+            ghcr.io/dave4245/images:minecraft_but

@@ -1,4 +1,4 @@
-name: Central Control
+name: Block Shuffle
 on:
   schedule:
     - cron: "0 0 * * 1"
@@ -6,11 +6,11 @@ on:
     branches:
       - master
     paths:
-      - centralcontrol/*
+      - block_shuffle/*
       - Dockerfile
 jobs:
   push:
-    name: "images:cc"
+    name: "images:block_shuffle"
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -27,9 +27,9 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
       - uses: docker/build-push-action@v2
         with:
-          context: ./centralcontrol
+          context: ./block_shuffle
           file: ./Dockerfile
           platforms: linux/amd64
           push: true
           tags: |
-            ghcr.io/dave4245/images:cc
+            ghcr.io/dave4245/images:block_shuffle

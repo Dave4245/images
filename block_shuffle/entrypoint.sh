@@ -8,7 +8,7 @@ echo "==============================================================="
 
 rm -rv /home/container/data/
 
-cp -vT /data/servers/plugins/MinecraftBut.jar /home/container/data/
+cp -vT /data/servers/plugins/BlockShuffle.jar /home/container/data/
 cp -RvT /data/servers/configs/minigame/ /home/container/data/
 cp -RvT /data/servers/plugins/core/ /home/container/data/
 

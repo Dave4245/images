@@ -7,7 +7,12 @@ echo "Downloading server files."
 echo "==============================================================="
 
 rm -rv /home/container/data/
-cp -RvT /data/ /home/container/data/
+
+cp -vT /data/servers/plugins/Hub.jar /home/container/data/
+cp -RvT /data/servers/configs/hub/ /home/container/data/
+cp -RvT /data/servers/plugins/core/ /home/container/data/
+
+
 hostname > /home/container/data/hostname.txt
 
 echo "==============================================================="

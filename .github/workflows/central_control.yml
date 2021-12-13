@@ -1,4 +1,4 @@
-name: Death Swap
+name: Central Control
 on:
   schedule:
     - cron: "0 0 * * 1"
@@ -6,11 +6,11 @@ on:
     branches:
       - master
     paths:
-      - death_swap/*
+      - central_control/*
       - Dockerfile
 jobs:
   push:
-    name: "images:death_swap"
+    name: "images:central_control"
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -27,9 +27,9 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
       - uses: docker/build-push-action@v2
         with:
-          context: ./death_swap
+          context: ./central_control
           file: ./Dockerfile
           platforms: linux/amd64
           push: true
           tags: |
-            ghcr.io/dave4245/images:death_swap
+            ghcr.io/dave4245/images:central_control

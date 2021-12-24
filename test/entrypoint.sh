@@ -14,7 +14,7 @@ cp -rv /data/servers/configs/hub/* /home/container/data
 cp -rv /data/servers/plugins/core/* /home/container/data/plugins
 
 hostname > /home/container/data/hostname.txt
-printenv TEST_SERVER > /home/container/data/test_server.txt
+$TEST_SERVER > /home/container/data/test_server.txt
 
 echo "==============================================================="
 echo "Starting server."

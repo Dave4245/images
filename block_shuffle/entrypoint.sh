@@ -14,6 +14,7 @@ cp -rv /data/servers/configs/minigame/* /home/container/data/
 cp -rv /data/servers/plugins/core/* /home/container/data/plugins/
 
 hostname > /home/container/data/hostname.txt
+echo "${TEST_SERVER}" > /home/container/data/test_server.txt
 
 echo "==============================================================="
 echo "Starting server."

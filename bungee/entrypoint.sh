@@ -12,6 +12,8 @@ mkdir -pv /home/container/data/plugins/
 cp -rv /data/servers/plugins/bungee/* /home/container/data/plugins
 cp -rv /data/servers/configs/bungee/* /home/container/data
 
+echo "${TEST_SERVER}" > /home/container/data/test_server.txt
+
 echo "==============================================================="
 echo "Starting server."
 echo "==============================================================="

@@ -11,6 +11,8 @@ mkdir -pv /home/container/data/
 
 cp -rv /data/systems/Bot.jar /home/container/data
 
+echo "${TEST_SERVER}" > /home/container/data/test_server.txt
+
 echo "==============================================================="
 echo "Starting server."
 echo "==============================================================="

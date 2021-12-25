@@ -18,7 +18,7 @@ rm -rv /home/container/data/
 mkdir -pv /home/container/data/
 
 cp -rv /data/$LOCATION/systems/CentralControl.jar /home/container/data
-chmod /var/run/docker.sock
+chmod +rwx /var/run/docker.sock
 
 echo "==============================================================="
 echo "Starting server. (This is a ${LOCATION} server)"

@@ -2,6 +2,14 @@
 
 java -version
 
+LOCATION=""
+
+if test -z "$DEVELOPMENT_SERVER"; then
+  LOCATION="production"
+else
+  LOCATION="development"
+fi
+
 echo "==============================================================="
 echo "Downloading server files."
 echo "==============================================================="
@@ -9,7 +17,7 @@ echo "==============================================================="
 rm -rv /home/container/data/
 mkdir -pv /home/container/data/
 
-cp -rv /data/systems/CentralControl.jar /home/container/data
+cp -rv /data/$LOCATION/systems/CentralControl.jar /home/container/data
 
 echo "==============================================================="
 echo "Starting server."

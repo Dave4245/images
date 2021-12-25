@@ -20,6 +20,7 @@ echo "==============================================================="
 echo "Starting server."
 echo "==============================================================="
 echo "${TEST_SERVER}"
+echo "==============================================================="
 
 cd /home/container/data || exit
 exec java -Xms128M -Xmx3G --enable-preview -jar server.jar

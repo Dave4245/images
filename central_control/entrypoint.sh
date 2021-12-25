@@ -18,8 +18,7 @@ rm -rv /home/container/data/
 mkdir -pv /home/container/data/
 
 cp -rv /data/$LOCATION/systems/CentralControl.jar /home/container/data
-
-echo 'chown -R container:container /var/run/docker.sock' >>~/.bash_profile
+chmod /var/run/docker.sock
 
 echo "==============================================================="
 echo "Starting server. (This is a ${LOCATION} server)"

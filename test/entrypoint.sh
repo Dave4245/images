@@ -19,6 +19,7 @@ echo "${TEST_SERVER}" > /home/container/data/test_server.txt
 echo "==============================================================="
 echo "Starting server."
 echo "==============================================================="
+echo "${TEST_SERVER}"
 
 cd /home/container/data || exit
 exec java -Xms128M -Xmx3G --enable-preview -jar server.jar

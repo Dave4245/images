@@ -20,7 +20,7 @@ mkdir -pv /home/container/data/
 cp -rv /data/$LOCATION/systems/Bot.jar /home/container/data
 
 echo "==============================================================="
-echo "Starting server."
+echo "Starting server. (This is a ${LOCATION} server)"
 echo "==============================================================="
 
 cd /home/container/data || exit

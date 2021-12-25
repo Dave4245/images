@@ -7,7 +7,6 @@ on:
       - master
     paths:
       - central_control/*
-      - Dockerfile
 jobs:
   push:
     name: "images:central_control"

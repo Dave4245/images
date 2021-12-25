@@ -14,6 +14,14 @@ cp -rv /data/servers/configs/hub/* /home/container/data
 cp -rv /data/servers/plugins/core/* /home/container/data/plugins
 
 hostname > /home/container/data/hostname.txt
+
+if [ -z "$TEST_SERVER" ]
+then
+      echo "\$TEST_SERVER is empty"
+else
+      echo "\$TEST_SERVER is NOT empty"
+fi
+
 echo "${TEST_SERVER}" > /home/container/data/test_server.txt
 
 echo "==============================================================="

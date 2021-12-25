@@ -6,11 +6,11 @@ LOCATION=""
 IS_DEVELOPMENT_SERVER=""
 
 if test -z "$DEVELOPMENT_SERVER"; then
-  LOCATION="development"
-  IS_DEVELOPMENT_SERVER="true"
-else
   LOCATION="production"
   IS_DEVELOPMENT_SERVER="false"
+else
+  LOCATION="development"
+  IS_DEVELOPMENT_SERVER="true"
 fi
 
 echo "==============================================================="
@@ -26,7 +26,7 @@ cp -rv /data/$LOCATION/servers/configs/bungee/* /home/container/data
 echo "${IS_DEVELOPMENT_SERVER}" > /home/container/data/development_server.txt
 
 echo "==============================================================="
-echo "Starting server."
+echo "Starting server. (This is a ${LOCATION} server)"
 echo "==============================================================="
 
 cd /home/container/data || exit

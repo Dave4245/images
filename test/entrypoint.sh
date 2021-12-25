@@ -6,11 +6,11 @@ LOCATION=""
 IS_DEVELOPMENT_SERVER=""
 
 if test -z "$DEVELOPMENT_SERVER"; then
-  LOCATION="development"
-  IS_DEVELOPMENT_SERVER="true"
-else
   LOCATION="production"
   IS_DEVELOPMENT_SERVER="false"
+else
+  LOCATION="development"
+  IS_DEVELOPMENT_SERVER="true"
 fi
 
 echo "==============================================================="

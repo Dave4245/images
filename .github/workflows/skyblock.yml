@@ -1,4 +1,4 @@
-name: Central Control
+name: Skyblock
 on:
   schedule:
     - cron: "0 0 * * 1"
@@ -6,11 +6,11 @@ on:
     branches:
       - master
     paths:
-      - central_control/*
+      - skyblock/*
       - Dockerfile
 jobs:
   push:
-    name: "images:central_control"
+    name: "images:skyblock"
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -27,9 +27,9 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
       - uses: docker/build-push-action@v2
         with:
-          context: ./central_control
+          context: ./skyblock
           file: ./Dockerfile
           platforms: linux/amd64
           push: true
           tags: |
-            ghcr.io/dave4245/images:central_control
+            ghcr.io/dave4245/images:skyblock

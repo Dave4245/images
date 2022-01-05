@@ -1,4 +1,4 @@
-name: Skyblock
+name: Survival
 on:
   schedule:
     - cron: "0 0 * * 1"
@@ -6,11 +6,11 @@ on:
     branches:
       - master
     paths:
-      - skyblock/*
+      - survival/*
       - Dockerfile
 jobs:
   push:
-    name: "images:skyblock"
+    name: "images:survival"
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -27,9 +27,9 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
       - uses: docker/build-push-action@v2
         with:
-          context: ./skyblock
+          context: ./survival
           file: ./Dockerfile
           platforms: linux/amd64
           push: true
           tags: |
-            ghcr.io/dave4245/images:skyblock
+            ghcr.io/dave4245/images:survival

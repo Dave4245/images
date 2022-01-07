@@ -32,5 +32,5 @@ echo "Starting server. (This is a ${LOCATION} server)"
 echo "==============================================================="
 
 cd /home/container/data || exit
-exec java -Xms128M -Xmx4G --enable-preview -jar server.jar
+exec java -Xms128M -Xmx5G --enable-preview -jar server.jar
 

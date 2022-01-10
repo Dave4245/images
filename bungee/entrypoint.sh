@@ -17,17 +17,17 @@ echo "==============================================================="
 echo "Downloading server files."
 echo "==============================================================="
 
-rm -rv /home/container/data/
-mkdir -pv /home/container/data/plugins/
+rm -rv /home/data/
+mkdir -pv /home/data/plugins/
 
-cp -rv /data/$LOCATION/servers/plugins/bungee/* /home/container/data/plugins
-cp -rv /data/$LOCATION/servers/configs/bungee/* /home/container/data
+cp -rv /data/$LOCATION/servers/plugins/bungee/* /home/data/plugins
+cp -rv /data/$LOCATION/servers/configs/bungee/* /home/data
 
-echo "${IS_DEVELOPMENT_SERVER}" > /home/container/data/development_server.txt
+echo "${IS_DEVELOPMENT_SERVER}" > /home/data/development_server.txt
 
 echo "==============================================================="
 echo "Starting server. (This is a ${LOCATION} server)"
 echo "==============================================================="
 
-cd /home/container/data || exit
-exec java -Xms128M -Xmx1G --enable-preview -jar server.jar
+cd /home/data || exit
+exec java -Xms128M -Xmx2G --enable-preview -jar server.jar

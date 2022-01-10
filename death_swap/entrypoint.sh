@@ -17,20 +17,20 @@ echo "==============================================================="
 echo "Downloading server files."
 echo "==============================================================="
 
-rm -rv /home/container/data/
-mkdir -pv /home/container/data/plugins/
+rm -rv /home/data/
+mkdir -pv /home/data/plugins/
 
-cp -rv /data/$LOCATION/servers/plugins/DeathSwap.jar /home/container/data/plugins
-cp -rv /data/$LOCATION/servers/configs/minigame/* /home/container/data
-cp -rv /data/$LOCATION/servers/plugins/core/* /home/container/data/plugins
+cp -rv /data/$LOCATION/servers/plugins/DeathSwap.jar /home/data/plugins
+cp -rv /data/$LOCATION/servers/configs/minigame/* /home/data
+cp -rv /data/$LOCATION/servers/plugins/core/* /home/data/plugins
 
-hostname > /home/container/data/hostname.txt
-echo "${IS_DEVELOPMENT_SERVER}" > /home/container/data/development_server.txt
+hostname > /home/data/hostname.txt
+echo "${IS_DEVELOPMENT_SERVER}" > /home/data/development_server.txt
 
 echo "==============================================================="
 echo "Starting server. (This is a ${LOCATION} server)"
 echo "==============================================================="
 
-cd /home/container/data || exit
-exec java -Xms128M -Xmx5G --enable-preview -jar server.jar
+cd /home/data || exit
+exec java -Xms128M -Xmx6G --enable-preview -jar server.jar
 

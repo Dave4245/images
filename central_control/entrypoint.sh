@@ -14,14 +14,14 @@ echo "==============================================================="
 echo "Downloading server files."
 echo "==============================================================="
 
-rm -rv /home/container/data/
-mkdir -pv /home/container/data/
+rm -rv /home/data/
+mkdir -pv /home/data/
 
-cp -rv /data/$LOCATION/systems/CentralControl.jar /home/container/data
+cp -rv /data/$LOCATION/systems/CentralControl.jar /home/data
 
 echo "==============================================================="
 echo "Starting server. (This is a ${LOCATION} server)"
 echo "==============================================================="
 
-cd /home/container/data || exit
+cd /home/data || exit
 exec java -Xms128M -Xmx1G --enable-preview -jar CentralControl.jar

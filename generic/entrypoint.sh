@@ -19,5 +19,5 @@ echo "Starting server."
 echo "==============================================================="
 
 cd /home/data || exit
-exec java -Xms128M -Xmx8G --enable-preview -jar server.jar
+exec java -Xms128M -Xmx8G -Dlog4j2.formatMsgNoLookups=true --enable-preview -jar server.jar
 

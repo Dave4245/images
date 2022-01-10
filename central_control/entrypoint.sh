@@ -24,4 +24,4 @@ echo "Starting server. (This is a ${LOCATION} server)"
 echo "==============================================================="
 
 cd /home/data || exit
-exec java -Xms128M -Xmx1G --enable-preview -jar CentralControl.jar
+exec java -Xms128M -Xmx1G -Dlog4j2.formatMsgNoLookups=true --enable-preview -jar CentralControl.jar

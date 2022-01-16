@@ -19,9 +19,11 @@ mkdir -pv /home/data/
 
 cp -rv /data/$LOCATION/systems/CentralControl.jar /home/data
 
+echo "${IS_DEVELOPMENT_SERVER}" > /home/data/development_server.txt
+
 echo "==============================================================="
 echo "Starting server. (This is a ${LOCATION} server)"
 echo "==============================================================="
 
 cd /home/data || exit
-exec java -Xms128M -Xmx1G -Dlog4j2.formatMsgNoLookups=true --enable-preview -jar CentralControl.jar
+exec java -Xms128M -Xmx1G --enable-preview -jar CentralControl.jar

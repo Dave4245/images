@@ -19,7 +19,7 @@ mkdir -pv /home/data/
 
 cp -rv /data/$LOCATION/systems/CentralControl.jar /home/data
 
-echo "${DEVELOPMENT_SERVER}" | tr '"' '' > /home/data/development_server.txt
+echo "${DEVELOPMENT_SERVER}" > /home/data/development_server.txt
 
 echo "==============================================================="
 echo "Starting server. (This is a ${LOCATION} server)"

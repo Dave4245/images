@@ -19,7 +19,7 @@ mkdir -pv /home/data/
 
 cp -rv /data/$LOCATION/systems/Bot.jar /home/data
 
-echo "${IS_DEVELOPMENT_SERVER}" > /home/data/development_server.txt
+echo "${DEVELOPMENT_SERVER}" > /home/data/development_server.txt
 
 echo "==============================================================="
 echo "Starting server. (This is a ${LOCATION} server)"

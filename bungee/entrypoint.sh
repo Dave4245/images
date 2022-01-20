@@ -20,6 +20,7 @@ mkdir -pv /home/data/plugins/
 cp -rv /data/$LOCATION/servers/plugins/bungee/* /home/data/plugins
 cp -rv /data/$LOCATION/servers/configs/bungee/* /home/data
 
+hostname > /home/data/hostname.txt
 echo "${DEVELOPMENT_SERVER}" > /home/data/development_server.txt
 
 echo "==============================================================="

@@ -26,4 +26,4 @@ echo "Starting server. (This is a ${LOCATION} server)"
 echo "==============================================================="
 
 cd /home/data || exit
-exec java -Xms128M -Xmx2G -Dlog4j2.formatMsgNoLookups=true --enable-preview -jar Bot.jar
+exec java -Xms128M -Xmx2G --enable-preview -jar Bot.jar

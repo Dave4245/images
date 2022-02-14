@@ -19,6 +19,7 @@ mkdir -pv /home/data/plugins/
 
 cp -rv /data/$LOCATION/servers/plugins/Minigame.jar /home/data/plugins
 cp -rv /data/$LOCATION/servers/configs/minigame/* /home/data
+cp -rv /data/$LOCATION/servers/configs/server.jar /home/data
 cp -rv /data/$LOCATION/servers/plugins/core/* /home/data/plugins
 
 hostname > /home/data/hostname.txt

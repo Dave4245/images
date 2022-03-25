@@ -12,7 +12,6 @@ mkdir /home/data/plugins
 cp -rv /data/production/servers/plugins/core/* /home/data/plugins
 
 hostname > /home/data/hostname.txt
-echo "false" > /home/data/development_server.txt
 
 echo "==============================================================="
 echo "Starting server."
